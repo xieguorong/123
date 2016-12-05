@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title></title>
+
+    <link rel="stylesheet" href="css/swiper.min.css" />
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="css/index.css" />
+</head>
+<script scr="js/jquery.js"></script>
+<script src="js/swiper.jquery.min.js"></script>
+<script src="js/swiper.animate1.0.2.min.js"></script>
+<script src="js/swiper.min.js"></script>
+<script scr="js/index.js"></script>
+<body>
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide shan">
+            <div class="hh ani" swiper-animate-effect="bounceIn" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s"></div>
+            <div class="logo" swiper-animate-effect="bounceIn" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s"></div>
+            <p class="xiao ke" swiper-animate-effect="rollIn" swiper-animate-duration="1s" swiper-animate-delay="0.5s">极致体验</p>
+            <p class="ain" swiper-animate-effect="rollIn" swiper-animate-duration="1s" swiper-animate-delay="0.5s">好的新闻客户端</p>
+            <div class="xue ani" swiper-animate-effect="bounceInDown" swiper-animate-duration="2s" swiper-animate-delay="0s"></div>
+        </div>
+        <div class="swiper-slide shan">
+            <p class="ani xiao1" swiper-animate-effect="tada" swiper-animate-duration="2s" swiper-animate-delay="0.3s">精选资讯</p>
+            <p class="du" swiper-animate-effect="rubberBand" swiper-animate-duration="2s" swiper-animate-delay="0.5s">让你一次读个够</p>
+            <div class="xue2 ani" swiper-animate-effect="shake" swiper-animate-duration="2s" swiper-animate-delay="1s"></div>
+        </div>
+        <div class="swiper-slide shan">
+            <div class="imgbox xiao3" swiper-animate-effect="swing" swiper-animate-duration="1s" swiper-animate-delay="0.3s"></div>
+            
+            <span class="yue xiao4 ani" swiper-animate-effect="lightSpeedIn" swiper-animate-duration="1s" swiper-animate-delay="1s">更多意想不到</span>
+            <div class="long ani" swiper-animate-effect="lightSpeedIn" swiper-animate-duration="1s" swiper-animate-delay="1.5s"><a href="shouye.html">点击进入</a></div>
+            
+        </div>
+       
+
+<script>
+    var mySwiper = new Swiper ('.swiper-container', {
+        pagination: '.swiper-pagination',
+        onInit: function(swiper){ //Swiper2.x的初始化是onFirstInit
+            swiperAnimateCache(swiper); //隐藏动画元素
+            swiperAnimate(swiper); //初始化完成开始动画
+        },
+        onSlideChangeEnd: function(swiper){
+            swiperAnimate(swiper); //每个slide切换结束时也运行当前slide动画
+        }
+
+    })
+</script>
+</body>
+
+</html>
